@@ -1,10 +1,14 @@
-'''
-#Crear un arreglo de dos dimensiones de tamaño 3 x 3,
-con elementos aleatorios de números enteros del 0 al 100.
-'''
+# Crear un arreglo de dos dimensiones de 3 x 3 con números ceros,
+# excepto la diagonal principal que debe contener en el mismo orden los siguientes elementos 1, 2 y 3.
 
 import numpy as np
-import random as rd
 
-matriz = np.diag([1,1,1])
+matriz = np.zeros((3,3), dtype=int)
+print(matriz)
+contador = 1
+for i in range(3):
+    for j in range(3):
+        if i == j:
+            matriz[i][j] = contador
+            contador = contador + 1
 print(matriz)
